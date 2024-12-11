@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridCache.Serializers.MemoryPack", "src\HybridCache.Serializers.MemoryPack\HybridCache.Serializers.MemoryPack.csproj", "{0DA83091-BC18-4475-A391-6A1FACB5780D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridCache.Serializers.MemoryPack.Tests", "tests\HybridCache.Serializers.MemoryPack.Tests\HybridCache.Serializers.MemoryPack.Tests.csproj", "{54C4DFFC-99D4-4257-80C0-739BE0BC78E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DA83091-BC18-4475-A391-6A1FACB5780D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DA83091-BC18-4475-A391-6A1FACB5780D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DA83091-BC18-4475-A391-6A1FACB5780D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DA83091-BC18-4475-A391-6A1FACB5780D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54C4DFFC-99D4-4257-80C0-739BE0BC78E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C4DFFC-99D4-4257-80C0-739BE0BC78E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C4DFFC-99D4-4257-80C0-739BE0BC78E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C4DFFC-99D4-4257-80C0-739BE0BC78E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
