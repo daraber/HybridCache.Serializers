@@ -7,24 +7,24 @@ namespace HybridCache.Serializers.ProtobufNet.Tests;
 [Parallelizable(ParallelScope.All)]
 public class ProtobufNetTests
 {
-    private ProtobufNetSerializer<ProtoContractDto> _memoryPackSerializer;
+    private ProtobufNetSerializer<ProtoContractDto> _protobufNetSerializer;
 
     [SetUp]
     public void SetUp()
     {
-        _memoryPackSerializer = new ProtobufNetSerializer<ProtoContractDto>();
+        _protobufNetSerializer = new ProtobufNetSerializer<ProtoContractDto>();
     }
 
     [Test]
-    public void MemoryPackSerializer_SerializeAndDeserialize_ShouldBeEqual()
+    public void ProtobufNetSerializer_SerializeAndDeserialize_ShouldBeEqual()
     {
         var dto = ProtoContractDto.Random();
         var target = new ArrayBufferWriter<byte>();
-        _memoryPackSerializer.Serialize(dto, target);
+        _protobufNetSerializer.Serialize(dto, target);
 
         Assert.That(target.WrittenMemory.Length, Is.GreaterThan(0), "Serializer should write data");
 
-        var deserializedDto = _memoryPackSerializer.Deserialize(new ReadOnlySequence<byte>(target.WrittenMemory));
+        var deserializedDto = _protobufNetSerializer.Deserialize(new ReadOnlySequence<byte>(target.WrittenMemory));
         Assert.That(dto, Is.EqualTo(deserializedDto));
     }
 }
