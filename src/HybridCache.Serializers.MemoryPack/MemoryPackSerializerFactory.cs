@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
 using MemoryPack;
 using Microsoft.Extensions.Caching.Hybrid;
 
@@ -20,6 +21,6 @@ public class MemoryPackSerializerFactory : IHybridCacheSerializerFactory
 
     protected virtual bool SupportsType<T>()
     {
-        return typeof(T).GetCustomAttributes(typeof(MemoryPackableAttribute), false).Length > 0;
+        return typeof(T).GetCustomAttribute(typeof(MemoryPackableAttribute), false) is not null;
     }
 }
