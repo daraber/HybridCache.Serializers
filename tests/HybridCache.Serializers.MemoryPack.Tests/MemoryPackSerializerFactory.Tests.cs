@@ -13,7 +13,7 @@ public class MemoryPackSerializerFactoryTests
 
         Assert.Multiple(() =>
         {
-            Assert.That(result, Is.True, "Serializer factory should support MemoryPackableDto type");
+            Assert.That(result, Is.True, "Serializer factory should support types with the MemoryPackable attribute");
             Assert.That(serializer, Is.Not.Null, "Serializer should not be null");
         });
     }

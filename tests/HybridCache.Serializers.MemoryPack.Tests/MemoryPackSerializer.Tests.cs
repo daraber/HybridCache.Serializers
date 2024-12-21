@@ -5,7 +5,7 @@ namespace HybridCache.Serializers.MemoryPack.Tests;
 [TestOf(typeof(MemoryPackSerializer<>))]
 [Category("MemoryPack")]
 [Parallelizable(ParallelScope.All)]
-public class MemoryPackTests
+public class MemoryPackSerializerTests
 {
     private MemoryPackSerializer<MemoryPackableDto> _memoryPackSerializer;
 
