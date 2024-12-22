@@ -5,7 +5,7 @@ namespace HybridCache.Serializers.ProtobufNet.Tests;
 [TestOf(typeof(ProtobufNetSerializer<>))]
 [Category("ProtobufNet")]
 [Parallelizable(ParallelScope.All)]
-public class ProtobufNetTests
+public class ProtobufNetSerializerTests
 {
     private ProtobufNetSerializer<ProtoContractDto> _protobufNetSerializer;
 
