@@ -1,6 +1,6 @@
 namespace HybridCache.Serializers.ProtobufNet.Tests;
 
-[TestOf(typeof(ProtobufNetSerializer<>))]
+[TestOf(typeof(ProtobufNetSerializerFactory))]
 [Category("ProtobufNet")]
 [Parallelizable(ParallelScope.All)]
 public class ProtobufNetSerializerFactoryTests
