@@ -1,5 +1,6 @@
 namespace HybridCache.Serializers.MemoryPack.Tests;
 
+[TestFixture]
 [TestOf(typeof(MemoryPackSerializerFactory))]
 [Category("MemoryPack")]
 [Parallelizable(ParallelScope.All)]

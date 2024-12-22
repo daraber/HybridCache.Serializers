@@ -2,6 +2,7 @@
 
 namespace HybridCache.Serializers.ProtobufNet.Tests;
 
+[TestFixture]
 [TestOf(typeof(ProtobufNetSerializer<>))]
 [Category("ProtobufNet")]
 [Parallelizable(ParallelScope.All)]
