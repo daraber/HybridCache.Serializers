@@ -1,4 +1,5 @@
 ﻿using HybridCache.Serializers.MessagePack;
+using HybridCache.Serializers.Tests.Shared.Internal;
 
 namespace HybridCache.Serializers.Tests.Shared.MessagePack;
 

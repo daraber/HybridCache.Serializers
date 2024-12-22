@@ -1,4 +1,5 @@
-﻿using ProtoBuf;
+﻿using HybridCache.Serializers.Tests.Shared.Internal;
+using ProtoBuf;
 
 namespace HybridCache.Serializers.Tests.Shared.ProtobufNet;
 

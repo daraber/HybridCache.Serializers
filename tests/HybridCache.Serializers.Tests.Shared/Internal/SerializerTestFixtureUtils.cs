@@ -1,7 +1,7 @@
 ﻿using System.Buffers;
 using Microsoft.Extensions.Caching.Hybrid;
 
-namespace HybridCache.Serializers.Tests.Shared;
+namespace HybridCache.Serializers.Tests.Shared.Internal;
 
 internal static class SerializerTestFixtureUtils
 {
