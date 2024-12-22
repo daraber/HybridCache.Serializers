@@ -3,7 +3,7 @@ using Microsoft.Extensions.Caching.Hybrid;
 
 namespace HybridCache.Serializers.Tests.Shared;
 
-internal static class SerializerFixtureUtils
+internal static class SerializerTestFixtureUtils
 {
     public static void SerializeAndDeserialize_ShouldBeEqual<T>(IHybridCacheSerializer<T> serializer)
         where T : class, IEquatable<T>, IRandomizable<T>

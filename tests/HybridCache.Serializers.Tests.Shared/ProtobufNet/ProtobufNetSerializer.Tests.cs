@@ -12,6 +12,6 @@ public class ProtobufNetSerializer
     public void ProtobufNetSerializer_SerializeAndDeserialize_ShouldBeEqual()
     {
         var serializer = new ProtobufNetSerializer<ProtoContractDto>();
-        SerializerFixtureUtils.SerializeAndDeserialize_ShouldBeEqual(serializer);
+        SerializerTestFixtureUtils.SerializeAndDeserialize_ShouldBeEqual(serializer);
     }
 }

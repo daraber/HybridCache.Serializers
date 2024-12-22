@@ -12,6 +12,6 @@ public class MemoryPackSerializerTests
     public void MemoryPackSerializer_SerializeAndDeserialize_ShouldBeEqual()
     {
         var serializer = new MemoryPackSerializer<MemoryPackableDto>();
-        SerializerFixtureUtils.SerializeAndDeserialize_ShouldBeEqual(serializer);
+        SerializerTestFixtureUtils.SerializeAndDeserialize_ShouldBeEqual(serializer);
     }
 }

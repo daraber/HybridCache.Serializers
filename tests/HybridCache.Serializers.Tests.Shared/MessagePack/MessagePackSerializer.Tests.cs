@@ -13,6 +13,6 @@ public class MessagePackSerializerTests
     public void MessagePackSerializer_SerializeAndDeserialize_ShouldBeEqual()
     {
         var serializer = new MessagePackSerializer<MessagePackObjectDto>();
-        SerializerFixtureUtils.SerializeAndDeserialize_ShouldBeEqual(serializer);
+        SerializerTestFixtureUtils.SerializeAndDeserialize_ShouldBeEqual(serializer);
     }
 }
