@@ -22,8 +22,7 @@ internal static class SerializerFactoryTestFixtureUtils
     {
         var tryCreateSerializerMethod = factory.GetType().GetMethod("TryCreateSerializer");
         Assert.That(tryCreateSerializerMethod, Is.Not.Null, "Method TryCreateSerializer should exist");
-
-   
+        
         var serializers = new Dictionary<Type, (bool canSerialize, object? serializer)>();
 
         foreach (var type in types)
