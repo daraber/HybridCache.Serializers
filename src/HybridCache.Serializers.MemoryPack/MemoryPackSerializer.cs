@@ -4,7 +4,7 @@ using Microsoft.Extensions.Caching.Hybrid;
 
 namespace HybridCache.Serializers.MemoryPack;
 
-public class MemoryPackSerializer<T>(MemoryPackSerializerOptions? serializerOptions = default)
+public class MemoryPackSerializer<T>(MemoryPackSerializerOptions? serializerOptions = null)
     : IHybridCacheSerializer<T>
 {
     public T Deserialize(ReadOnlySequence<byte> source)
