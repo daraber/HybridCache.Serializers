@@ -5,13 +5,13 @@ using Microsoft.Extensions.Caching.Hybrid;
 
 namespace HybridCache.Serializers.MemoryPack;
 
-public class MemoryPackSerializerFactory : IHybridCacheSerializerFactory
+public class MemoryPackSerializerFactory(MemoryPackSerializerOptions? options = null) : IHybridCacheSerializerFactory
 {
     public bool TryCreateSerializer<T>([NotNullWhen(true)] out IHybridCacheSerializer<T>? serializer)
     {
         if (SupportsType<T>())
         {
-            serializer = new MemoryPackSerializer<T>();
+            serializer = new MemoryPackSerializer<T>(options);
             return true;
         }
 
