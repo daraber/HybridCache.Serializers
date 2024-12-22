@@ -1,9 +1,9 @@
 ﻿using ProtoBuf;
 
-namespace HybridCache.Serializers.ProtobufNet.Tests;
+namespace HybridCache.Serializers.Tests.Shared.ProtobufNet;
 
 [ProtoContract]
-internal sealed record ProtoContractDto
+internal sealed record ProtoContractDto : IRandomizable<ProtoContractDto>
 {
     [ProtoMember(1)] public required string Field1 { get; init; }
     [ProtoMember(2)] public required int Field2 { get; init; }
@@ -13,15 +13,15 @@ internal sealed record ProtoContractDto
     
     public static ProtoContractDto Random()
     {
-        var rand = new Random();
+        var random = new Random();
 
         return new ProtoContractDto
         {
             Field1 = Guid.NewGuid().ToString(),
-            Field2 = rand.Next(),
-            Field3 = rand.Next() % 2 == 0,
-            Field4 = rand.NextDouble(),
-            Field5 = (Guid.NewGuid().ToString(), rand.Next() % 2 == 0)
+            Field2 = random.Next(),
+            Field3 = random.Next() % 2 == 0,
+            Field4 = random.NextDouble(),
+            Field5 = (Guid.NewGuid().ToString(), random.Next() % 2 == 0)
         };
     }
 }

@@ -1,6 +1,6 @@
 ﻿using MessagePack;
 
-namespace HybridCache.Serializers.MessagePack.Tests;
+namespace HybridCache.Serializers.Tests.Shared.MessagePack;
 
 [MessagePackObject(AllowPrivate = true)]
 internal sealed record MessagePackObjectDto(
@@ -9,7 +9,7 @@ internal sealed record MessagePackObjectDto(
     [property: Key(2)] bool Field3,
     [property: Key(3)] double Field4,
     [property: Key(4)] (string, bool) Field5
-)
+) : IRandomizable<MessagePackObjectDto>
 {
     public static MessagePackObjectDto Random()
     {

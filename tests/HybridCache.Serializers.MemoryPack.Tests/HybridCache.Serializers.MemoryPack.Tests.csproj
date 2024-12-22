@@ -22,6 +22,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\src\HybridCache.Serializers.MemoryPack\HybridCache.Serializers.MemoryPack.csproj" />
+      <ProjectReference Include="..\HybridCache.Serializers.Tests.Shared\HybridCache.Serializers.Tests.Shared.csproj" />
     </ItemGroup>
 
 </Project>
