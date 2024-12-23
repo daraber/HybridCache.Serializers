@@ -7,16 +7,20 @@
 | [protobuf-net](https://github.com/protobuf-net/protobuf-net)            | ProtoContract     | Contract based protocol buffers serializer          |
 
 ---
+
 ### Benchmarks
-Benchmark results will vary on different systems and environments. Conduct your own benchmarks to evaluate performance for
-your use case if warranted. Note that serializers produce varying byte sizes which impact performance and storage, thus speed is not universally the best measure for success.
+
+Benchmark results will vary on different systems and environments. Conduct your own benchmarks to evaluate performance
+for your use case if warranted. Note that serializers produce varying byte sizes which impact performance and storage,
+thus speed is not universally the best measure for success.
 
 **Environment**: .NET SDK 9.0.1, Windows 11, i9-10900 CPU 2.80GHz
 
-![Benchmark](assets/plot_benchmark_person.png)
+![Benchmark](https://github.com/user-attachments/assets/4d3400e8-1783-4c4b-b1d3-5d54522a1e59)
 *Benchmarks when (de)serializing a [Person](benchmarks/HybridCache.Serializers.Benchmarks/Models/Person.cs) object.*
 
 ---
+
 ### Notes
 
 * `IHybridCacheSerializerFactory` implementations yield serializers for types with the respective serializer attribute
