@@ -11,20 +11,13 @@ namespace HybridCache.Serializers.Benchmarks.Models;
 
 [MessagePackObject]
 [MemoryPackable]
-[ProtoContract]
+[ProtoContract(SkipConstructor = true)]
 public sealed partial record Person(
     [property: Key(0), ProtoMember(1)] string Name,
     [property: Key(1), ProtoMember(2)] int Age,
     [property: Key(2), ProtoMember(3)] double Height
 ) : IParamsSourceProvider<Person>
 {
-    [SerializationConstructor]
-    [MemoryPackConstructor]
-    public Person() : this("", 0, 0)
-    {
-        // protobuf-net requires a parameterless constructor
-    }
-
     public static Person Random()
     {
         var random = new Random();

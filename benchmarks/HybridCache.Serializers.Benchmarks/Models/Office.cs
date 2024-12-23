@@ -11,20 +11,13 @@ namespace HybridCache.Serializers.Benchmarks.Models;
 
 [MessagePackObject]
 [MemoryPackable]
-[ProtoContract]
+[ProtoContract(SkipConstructor = true)]
 public sealed partial record Office(
     [property: Key(0), ProtoMember(1)] string CompanyName,
     [property: Key(1), ProtoMember(2)] string Address,
     [property: Key(2), ProtoMember(3)] List<Person> Employees
 ) : IParamsSourceProvider<Office>
 {
-    [SerializationConstructor]
-    [MemoryPackConstructor]
-    public Office() : this("", "", [])
-    {
-        // protobuf-net requires a parameterless constructor
-    }
-
     public static IEnumerable<Office> GetModels() => [Random(100), Random(1000), Random(10000)];
 
     public static IEnumerable<IHybridCacheSerializer<Office>> GetSerializers() =>

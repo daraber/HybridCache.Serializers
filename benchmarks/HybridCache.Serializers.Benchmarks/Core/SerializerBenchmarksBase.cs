@@ -8,7 +8,6 @@ namespace HybridCache.Serializers.Benchmarks.Core;
 public abstract class SerializerBenchmarksBase
 {
     // Hacky way to expose serialized sizes 
-    // ReSharper disable once StaticMemberInGenericType
     public static Dictionary<(string serializer, string model), long> SerializedModelSizes { get; } = new();
 }
 
