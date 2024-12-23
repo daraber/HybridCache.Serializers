@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridCache.Serializers.Mes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridCache.Serializers.Tests.Shared", "tests\HybridCache.Serializers.Tests.Shared\HybridCache.Serializers.Tests.Shared.csproj", "{3062AF7A-408F-4741-AD5B-4270BFA31E14}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridCache.Serializers.Benchmarks", "benchmarks\HybridCache.Serializers.Benchmarks\HybridCache.Serializers.Benchmarks.csproj", "{7A89E5C4-AB2E-44EB-B5E9-48EFE4C997A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{3062AF7A-408F-4741-AD5B-4270BFA31E14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3062AF7A-408F-4741-AD5B-4270BFA31E14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3062AF7A-408F-4741-AD5B-4270BFA31E14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A89E5C4-AB2E-44EB-B5E9-48EFE4C997A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A89E5C4-AB2E-44EB-B5E9-48EFE4C997A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A89E5C4-AB2E-44EB-B5E9-48EFE4C997A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A89E5C4-AB2E-44EB-B5E9-48EFE4C997A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

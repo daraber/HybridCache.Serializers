@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Title>HybridCache.Serializers.Benchmarks</Title>
+        <Description>Performance benchmarks for HybridCache serializers</Description>
+        <OutputType>exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="BenchmarkDotNet" Version="0.14.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\HybridCache.Serializers.MemoryPack\HybridCache.Serializers.MemoryPack.csproj" />
+      <ProjectReference Include="..\..\src\HybridCache.Serializers.MessagePack\HybridCache.Serializers.MessagePack.csproj" />
+      <ProjectReference Include="..\..\src\HybridCache.Serializers.ProtobufNet\HybridCache.Serializers.ProtobufNet.csproj" />
+    </ItemGroup>
+
+</Project>
