@@ -38,5 +38,5 @@ public sealed partial record Person(
         new ProtobufNetSerializer<Person>()
     ];
 
-    public override string ToString() => "Person(1)";
+    public override string ToString() => "Person";
 }

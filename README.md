@@ -17,11 +17,13 @@ thus speed is not universally the best measure for success.
 **Environment**: .NET SDK 9.0.1, Windows 11, i9-10900 CPU 2.80GHz
 
 ![BenchmarkPerson](https://github.com/user-attachments/assets/4d3400e8-1783-4c4b-b1d3-5d54522a1e59)
-*Benchmarks when (de)serializing a tiny [Person](benchmarks/HybridCache.Serializers.Benchmarks/Models/Person.cs) object.*
+<br/> <a name="BenchmarkPerson"><sup>[1]</sup></a> *Benchmarks when (de)serializing [Person](benchmarks/HybridCache.Serializers.Benchmarks/Models/Person.cs)*
+
+![BenchmarkComplexPerson](https://github.com/user-attachments/assets/a8efd898-1032-470c-97c1-738ccdc67e27)
+<br/> <a name="BenchmarkComplexPerson"><sup>[2]</sup></a> *Benchmarks when (de)serializing [ComplexPerson](benchmarks/HybridCache.Serializers.Benchmarks/Models/ComplexPerson.cs)*
 
 ![BenchmarkOffice](https://github.com/user-attachments/assets/ef263625-b827-49dc-886d-44739bf49a19)
-*Benchmarks when (de)serializing a large [Office](benchmarks/HybridCache.Serializers.Benchmarks/Models/Office.cs) object with 1000 [Person](benchmarks/HybridCache.Serializers.Benchmarks/Models/Person.cs) children.*
-
+<br/> <a name="BenchmarkOffice"><sup>[3]</sup></a> *Benchmarks when (de)serializing a large [Office](benchmarks/HybridCache.Serializers.Benchmarks/Models/Office.cs) object with 1000 [Person](benchmarks/HybridCache.Serializers.Benchmarks/Models/Person.cs) children.*
 
 ---
 

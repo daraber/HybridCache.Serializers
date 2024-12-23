@@ -9,3 +9,6 @@ public class OfficeSerializerBenchmarks : SerializerBenchmarksBase<Office>;
 
 [Config(typeof(SerializerBenchmarksConfig))]
 public class PersonSerializerBenchmarks : SerializerBenchmarksBase<Person>;
+
+[Config(typeof(SerializerBenchmarksConfig))]
+public class ComplexPersonSerializerBenchmarks : SerializerBenchmarksBase<ComplexPerson>;
