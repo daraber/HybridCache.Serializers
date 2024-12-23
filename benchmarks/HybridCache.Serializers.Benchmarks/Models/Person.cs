@@ -18,14 +18,13 @@ public sealed partial record Person(
     [property: Key(2), ProtoMember(3)] double Height
 ) : IParamsSourceProvider<Person>
 {
-    
     [SerializationConstructor]
     [MemoryPackConstructor]
     public Person() : this("", 0, 0)
     {
         // protobuf-net requires a parameterless constructor
     }
-    
+
     public static Person Random()
     {
         var random = new Random();
@@ -37,12 +36,7 @@ public sealed partial record Person(
         );
     }
 
-    public static IEnumerable<Person> GetModels() =>
-    [
-        Random(),
-        Random(),
-        Random()
-    ];
+    public static IEnumerable<Person> GetModels() => [Random()];
 
     public static IEnumerable<IHybridCacheSerializer<Person>> GetSerializers() =>
     [
