@@ -1,4 +1,5 @@
 ﻿using HybridCache.Serializers.Benchmarks.Core;
+using HybridCache.Serializers.Json;
 using HybridCache.Serializers.MemoryPack;
 using HybridCache.Serializers.MessagePack;
 using HybridCache.Serializers.ProtobufNet;
@@ -49,7 +50,8 @@ public sealed partial record ComplexPerson(
     [
         new MemoryPackSerializer<ComplexPerson>(),
         new MessagePackSerializer<ComplexPerson>(),
-        new ProtobufNetSerializer<ComplexPerson>()
+        new ProtobufNetSerializer<ComplexPerson>(),
+        new JsonSerializer<ComplexPerson>()
     ];
 
     public override string ToString() => "ComplexPerson";

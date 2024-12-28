@@ -22,6 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\src\HybridCache.Serializers.Json\HybridCache.Serializers.Json.csproj" />
       <ProjectReference Include="..\..\src\HybridCache.Serializers.MemoryPack\HybridCache.Serializers.MemoryPack.csproj" />
       <ProjectReference Include="..\..\src\HybridCache.Serializers.MessagePack\HybridCache.Serializers.MessagePack.csproj" />
       <ProjectReference Include="..\..\src\HybridCache.Serializers.ProtobufNet\HybridCache.Serializers.ProtobufNet.csproj" />

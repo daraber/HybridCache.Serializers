@@ -1,4 +1,5 @@
 ﻿using HybridCache.Serializers.Benchmarks.Core;
+using HybridCache.Serializers.Json;
 using HybridCache.Serializers.MemoryPack;
 using HybridCache.Serializers.MessagePack;
 using HybridCache.Serializers.ProtobufNet;
@@ -24,13 +25,10 @@ public sealed partial record Office(
     [
         new MemoryPackSerializer<Office>(),
         new MessagePackSerializer<Office>(),
-        new ProtobufNetSerializer<Office>()
+        new ProtobufNetSerializer<Office>(),
+        new JsonSerializer<Office>()
     ];
-
-    public override string ToString()
-    {
-        return $"Office({Employees.Count})";
-    }
+    
 
     private static Office Random(int employeeCount)
     {
@@ -40,4 +38,6 @@ public sealed partial record Office(
 
         return new Office(Guid.NewGuid().ToString(), Guid.NewGuid().ToString(), employees);
     }
+    
+    public override string ToString() => $"Office({Employees.Count})";
 }

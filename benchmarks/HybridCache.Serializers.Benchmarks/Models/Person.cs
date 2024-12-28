@@ -1,4 +1,5 @@
 ﻿using HybridCache.Serializers.Benchmarks.Core;
+using HybridCache.Serializers.Json;
 using HybridCache.Serializers.MemoryPack;
 using HybridCache.Serializers.MessagePack;
 using HybridCache.Serializers.ProtobufNet;
@@ -35,7 +36,8 @@ public sealed partial record Person(
     [
         new MemoryPackSerializer<Person>(),
         new MessagePackSerializer<Person>(),
-        new ProtobufNetSerializer<Person>()
+        new ProtobufNetSerializer<Person>(),
+        new JsonSerializer<Person>()
     ];
 
     public override string ToString() => "Person";
