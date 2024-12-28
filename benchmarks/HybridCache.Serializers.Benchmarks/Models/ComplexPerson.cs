@@ -26,7 +26,7 @@ public sealed partial record ComplexPerson(
     [property: Key(9), ProtoMember(10)] Dictionary<string, string> Metadata
 ) : IParamsSourceProvider<ComplexPerson>
 {
-    public static ComplexPerson Random()
+    private static ComplexPerson Random()
     {
         var random = new Random();
 
@@ -39,7 +39,7 @@ public sealed partial record ComplexPerson(
             Email: Guid.NewGuid().ToString(),
             DateOfBirth: DateTime.Now.AddYears(-random.Next(1, 100)),
             IsActive: random.Next(0, 2) == 1,
-            Tags: ["tag1", "tag2"],
+            Tags: [Guid.NewGuid().ToString(), Guid.NewGuid().ToString()],
             Metadata: new Dictionary<string, string> { { "key1", Guid.NewGuid().ToString() }, { "key2", Guid.NewGuid().ToString() } }
         );
     }
