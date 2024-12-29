@@ -37,7 +37,7 @@ public sealed partial record ComplexPerson(
             Address: Guid.NewGuid().ToString(),
             PhoneNumber: Guid.NewGuid().ToString(),
             Email: Guid.NewGuid().ToString(),
-            DateOfBirth: DateTime.Now.AddYears(-random.Next(1, 100)),
+            DateOfBirth: DateTime.UtcNow.AddYears(-random.Next(1, 100)),
             IsActive: random.Next(0, 2) == 1,
             Tags: [Guid.NewGuid().ToString(), Guid.NewGuid().ToString()],
             Metadata: new Dictionary<string, string> { { "key1", Guid.NewGuid().ToString() }, { "key2", Guid.NewGuid().ToString() } }
