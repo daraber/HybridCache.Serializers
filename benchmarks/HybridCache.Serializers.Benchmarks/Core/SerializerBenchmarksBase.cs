@@ -1,6 +1,7 @@
 ﻿using System.Buffers;
 using BenchmarkDotNet.Attributes;
 using HybridCache.Serializers.Benchmarks.Internal;
+using HybridCache.Serializers.Benchmarks.Models;
 using Microsoft.Extensions.Caching.Hybrid;
 
 namespace HybridCache.Serializers.Benchmarks.Core;
@@ -44,8 +45,7 @@ public abstract class SerializerBenchmarksBase<T> : SerializerBenchmarksBase whe
             );
         }
     }
-
-
+    
     [Benchmark(OperationsPerInvoke = 1)]
     public virtual void Serialize()
     {
@@ -61,7 +61,7 @@ public abstract class SerializerBenchmarksBase<T> : SerializerBenchmarksBase whe
 
     public static IEnumerable<IHybridCacheSerializer<T>> GetSerializers() => T.GetSerializers();
     public static IEnumerable<T> GetModels() => T.GetModels();
-    
+
     private static bool AreEqual(T model1, T model2)
     {
         var type = typeof(T);
@@ -73,7 +73,10 @@ public abstract class SerializerBenchmarksBase<T> : SerializerBenchmarksBase whe
 
             return fst switch
             {
-                IEnumerable<object> list1 when snd is IEnumerable<object> list2 => list1.SequenceEqual(list2),
+                IEnumerable<string> lst1 when snd is IEnumerable<string> lst2 => lst1.SequenceEqual(lst2),
+                IEnumerable<Person> lst1 when snd is IEnumerable<Person> lst2 => lst1.SequenceEqual(lst2),
+                // ReSharper disable once UsageOfDefaultStructEquality
+                IEnumerable<KeyValuePair<string, string>> dct1 when snd is IEnumerable<KeyValuePair<string, string>> dct2 => dct1.SequenceEqual(dct2), 
                 _ => Equals(fst, snd)
             };
         });
